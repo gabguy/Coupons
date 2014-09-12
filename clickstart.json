@@ -1,0 +1,26 @@
+{
+    "id": "tomcat8-maven-clickstart",
+    "name": "Tomcat 8",
+    "source": "git://github.com/CloudBees-community/tomcat8-maven-clickstart.git",
+    "description" : "Deploy your Maven web application on Tomcat 8.",
+    "doc-url" : "https://github.com/CloudBees-community/tomcat8-maven-clickstart/blob/master/README.md",
+    "app-package": "http://repository-community.forge.cloudbees.com/release/localdomain/localhost/tomcat8-maven-clickstart/1.0/tomcat8-maven-clickstart-1.0.war",
+    "icon" : "https://raw.github.com/CloudBees-community/tomcat8-maven-clickstart/master/icon.png",
+
+    "supported-by" : "community",
+
+    "runtime": {
+        "type": "tomcat8"
+    },
+    "databases": [
+        {
+            "type": "mysql",
+            "alias": "mydb"
+        }
+    ],
+    "build-with-jenkins": {
+        "template": {
+            "type": "maven"
+        }
+    }
+}

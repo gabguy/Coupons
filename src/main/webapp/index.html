@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AGCoupons</title>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="http://mahshev.herobo.com/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="http://mahshev.herobo.com/css/bootstrap1.css">
+<link rel="stylesheet" type="text/css" href="http://mahshev.herobo.com/css/bootstrap-theme.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript" src="http://mahshev.herobo.com/js/bootstrap.min.js"></script>
+
+
+
+
+<style type="text/css">
+
+a     {outline : none;  
+ font-size: 12px;}
+a     {border:0;        }
+img   {border : 0;      } 
+a img {outline : none;  }
+
+body
+{
+    color: #76797c;
+    background-color: #ffffff;
+}
+
+h2
+{
+    margin: 0;     
+    color: #000;
+    padding-top: 20px;
+    font-size: 40px;
+    font-family: "trebuchet ms", sans-serif;    
+}
+
+
+h3
+{
+    margin: 0;     
+    color: #000;
+    padding-top: 20px;
+    font-size: 30px;
+    font-family: "trebuchet ms", sans-serif;    
+}
+
+h4
+{
+    margin: 0;     
+    color: #000;
+    padding-top: 20px;
+    font-size: 20px;
+    font-family: "trebuchet ms", sans-serif;    
+}
+
+.item
+{
+    background: #efefef00;   
+    text-align: center;
+   
+
+}
+
+.carousel
+{
+    margin-top: 0px;
+   
+}
+.bs-example
+{
+  margin: 0px !important;
+  background: "#ffffff";
+  margin: -25px !important;
+}
+
+p
+{
+    font-size: 14px;
+}
+
+
+
+
+
+      .form-signin {
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5 !important;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
+
+
+
+
+
+
+span {
+  display: inline-block;
+  width: 20px;
+font-size: 4px;
+}
+
+
+
+
+</style>
+</head>
+
+
+
+
+
+
+
+<script language="javascript">
+document.onmousedown=disableclick;
+status="Right Click Disabled";
+Function disableclick(event)
+{
+  if(event.button==2)
+   {
+     alert(status);
+     return false;    
+   }
+}
+</script>
+
+
+
+
+
+
+
+
+<body oncontextmenu="return false">
+
+    <!-- add navbar-fixed-top for topping -->
+   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+<!--
+      <a class="navbar-brand">
+-->
+
+
+
+    </div>
+<p class="navbar-text navbar-left"> <a href="#" class="navbar-link"> </a></p>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+<li><img src="http://mahshev.herobo.com/agclogo3.png"></img></li>
+        <li class="active"><a href="index.html"><i class="fa fa-home fa-lg"></i></a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="browseCoupons.jsp">Coupons</a></li>
+
+<!--
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">MVC Chooser <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="adminpanel.html"><i class="fa fa-circle"></i>&nbsp Admin side</a></li>
+           
+            
+            <li class="divider"></li>
+             <li><a href="#"><i class="fa fa-circle-o"></i>&nbsp Client side</a></li>
+           
+          </ul>
+-->
+
+
+
+        <li><a data-toggle="modal"href="#mySecurityModal" border="0">Buyers Protection</a></li>
+
+
+
+
+
+
+
+
+
+
+           <li><a data-toggle="modal"href="#myModal" border="0">Developing Team</a></li>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+
+
+
+ <li><a href="login.jsp"><i class="fa fa-sign-in"></i>&nbsp;Sign in&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+</li>
+<!--
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-bars"></i>&nbspDeveloping Team <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+           
+            <li><a href="https://facebook.com/almogalbalach" target="_blank"><i = class="fa fa-user"></i>&nbsp Almog Albalach</a></li>
+            <li><a href="https://facebook.com/gabguy" target="_blank"><i = class="fa fa-user"></i>&nbsp Guy Gabbay</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Copyrights © 2014.</a></li>
+          </ul>
+        </li>
+      </ul>
+-->
+
+<!--
+      
+          <form class="navbar-form navbar-right" role="form"  method="GET">
+        
+            <div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+              <input type="text" name="username" placeholder="Email" class="form-control" autocomplete="off"
+ style= "height:40px !important; width: 110px;">
+            </div>
+            <div class="input-group">
+    
+
+     
+<span class="input-group-addon">
+                    <i class="fa fa-key fa-fw"></i></span>
+
+
+              <input type="password" name="password" placeholder="Password" class="form-control" autocomplete="off"
+               style= "height:40px !important; width: 110px;">
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <a href = "bs3-login-form.html" type="submit" class="btn btn-primary" style= "height:40px !important; " >Sign in &nbsp<i class="fa fa-sign-in"></i></a>
+          </form>
+       
+
+
+       
+    </div>
+  </div>
+
+
+-->
+
+</nav>
+
+ 
+
+
+
+
+<!-- Carousel -->
+<br></br>
+<div class="bs-example">
+    <div id="myCarousel" class="carousel slide" data-interval="4000" data-ride="carousel" data-wrap="true"
+     data-pause="">
+
+      <!-- Carousel indicators -->
+      <!--
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>  --> 
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+            <div class="active item"><img src="http://mahshev.herobo.com/agc5.jpg" class="img-responsive"></img>
+
+            </div>
+            <div class="item"><img src="http://mahshev.herobo.com/agc4.jpg"></img>
+            
+            </div>
+            <div class="item"><img src="http://mahshev.herobo.com/agc7.jpg"></img>
+
+            </div>
+        </div>
+        <!-- Carousel nav
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a> -->
+    </div>
+</div>
+
+
+
+
+<div class="container">
+        <div class="row">
+            <div class="col-md-12">
+              <h3><br><i class="fa fa-xing"></i> Top coupons for September!</h3>
+                <p style="color:grey">In today's world, coupons are the most popular way of achiving the best deal, we are here to make it more.
+                  <br> Sign up to get the best coupons out there!</p>
+            <a href="addUser.jsp" target="_blank" class="btn btn-almog4">
+                <i class="fa fa-spinner fa-spin"></i>&nbsp Sign up &raquo;
+              </a>
+
+               <a href="login.jsp" target="_blank" class="btn btn-primary">
+                <i class="fa fa-user"></i>&nbsp Login &raquo;
+              </a>
+
+
+
+
+              </p>
+</div>  
+
+</div>  </div>  
+
+
+
+
+<!--
+    <div class="container">
+        <div class="jumbotron">
+            <h2>Welcome to Nepo</h2>
+              <div class="row">
+            <div class="col-sm-5">
+            <h4>In today's world internet is the most popular way of connecting with the people, we are here to make it more.</h4>
+        </div>
+    </div>
+            <a href="http://www.tutorialrepublic.com" target="_blank" class="btn btn-default btn">Join to nepo &raquo;</a></p>
+</div>  
+
+          -->
+            <!-- btn btn-info btn-xs btn btn-info btn-sm   btn btn-info btn-lg   -->
+        
+
+
+<div class="container">
+
+
+        <div class="row">
+            <div class="col-md-12">    
+                <img src="http://mahshev.herobo.com/agcCommercial5.jpg" class="img-rounded">
+            </div> 
+     
+<div class="container">
+        <div class="row">
+            <div class="col-xs-4">
+               <h3 style="color:orange"><i class="fa fa-trophy"></i> Iphone 6 32gb
+                <br>- 30% OFF!
+               </h3>
+                <p style="color:orange">HTML is a markup language that is used for creating web pages. The HTML tutorial section will help you understand the basics of HTML, so that you can create your own web pages or website.</p>
+                <p><a href="couponsCart.jsp?id=10001" class="btn btn-almog3">
+                  <i class="fa fa-star"></i> Get Coupon &raquo;</a></p>
+            </div>
+            <div class="col-xs-4">
+                <h3>Casio G-SHOCK 223<br> - 25% OFF!</h3>
+                <p>CSS is used for describing the presentation of web pages. The CSS tutorial section will help you learn the essentials of CSS, so that you can fine control the style and layout of your HTML document.</p>
+                <p><a href="couponsCart.jsp?id=10002" class="btn btn-primary">
+                    
+                    Get Coupon &raquo;</a></p>
+            </div>
+            <div class="col-xs-4">
+                <h3>LED FLASHLISH 9000LMS <br> - 60% OFF!</h3>
+                <p>Bootstrap is a powerful front-end framework for faster and easier web development. The Bootstrap tutorial section will help you learn the techniques of Bootstrap so that you can quickly create your own website.</p>
+                <p><a href="couponsCart.jsp?id=10003" class="btn btn-primary">
+
+                <script type="text/javascript">
+                $(document).ready(function(){
+                    $(".popover-examples a").popover();   
+                });
+                </script>
+
+                  Get Coupon &raquo;</a></p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="row">
+            <div class="col-md-12">    
+                <img src="http://mahshev.herobo.com/agcCommercial4.jpg" class="img-rounded">
+            </div> 
+     
+<div class="container">
+        <div class="row">
+            <div class="col-xs-4">
+               <h3 style="color:purple"><i class="fa fa-clock-o fa-lg"></i>
+                3h52m Left!<Br>LG G3 16GB- 16% OFF!</h3>
+                <p style="color:purple">HTML is a markup language that is used for creating web pages. The HTML tutorial section will help you understand the basics of HTML, so that you can create your own web pages or website.</p>
+                <p><a href="couponsCart.jsp?id=10004"  class="btn btn-almog1">
+                  <i class="fa fa-clock-o"></i> Get Coupon &raquo; </a></p>
+            </div>
+            <div class="col-xs-4">
+                <h3>GoPro Silver hero3 <Br> - 35% OFF!</h3>
+                <p>CSS is used for describing the presentation of web pages. The CSS tutorial section will help you learn the essentials of CSS, so that you can fine control the style and layout of your HTML document.</p>
+                <p><a href="couponsCart.jsp?id=10005" class="btn btn-primary">
+                    
+                    Get Coupon &raquo;</a></p>
+            </div>
+            <div class="col-xs-4">
+                <h3>[NEW] Nikon DSLR D810 <br> - 5% OFF!</h3>
+                <p>Bootstrap is a powerful front-end framework for faster and easier web development. The Bootstrap tutorial section will help you learn the techniques of Bootstrap so that you can quickly create your own website.</p>
+                <p><a href="couponsCart.jsp?id=10006" class="btn btn-primary">
+
+                <script type="text/javascript">
+                $(document).ready(function(){
+                    $(".popover-examples a").popover();   
+                });
+                </script>
+
+                  Get Coupon &raquo;</a></p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="row">
+            <div class="col-md-12">    
+                <img src="http://mahshev.herobo.com/agcCommercial6.jpg" class="img-rounded">
+            </div> 
+     
+<div class="container">
+        <div class="row">
+            <div class="col-xs-4">
+               <h3 style="color:red"><i class="fa fa-ticket  fa-lg"></i>
+               Today's HOT Coupon<Br>Pizza Hat XL - 40% OFF!</h3>
+                <p style="color:red">HTML is a markup language that is used for creating web pages. The HTML tutorial section will help you understand the basics of HTML, so that you can create your own web pages or website.</p>
+                <p><a href="couponsCart.jsp?id=10007" class="btn btn-almog2">
+                 <i class="fa fa-ticket  fa-lg"></i>&nbspGet Coupon &raquo;</a></p>
+            </div>
+            <div class="col-xs-4">
+                <h3>Scientific Calculator fx98 <Br> - 55% OFF!</h3>
+                <p>CSS is used for describing the presentation of web pages. The CSS tutorial section will help you learn the essentials of CSS, so that you can fine control the style and layout of your HTML document.</p>
+                <p><a href="couponsCart.jsp?id=10008"  class="btn btn-primary">
+                    
+                    Get Coupon &raquo;</a></p>
+            </div>
+            <div class="col-xs-4">
+                <h3>Canon 18-135mm lens <br> - 25% OFF!</h3>
+                <p>Bootstrap is a powerful front-end framework for faster and easier web development. The Bootstrap tutorial section will help you learn the techniques of Bootstrap so that you can quickly create your own website.</p>
+                <p><a href="couponsCart.jsp?id=10009"  class="btn btn-primary">
+
+                <script type="text/javascript">
+                $(document).ready(function(){
+                    $(".popover-examples a").popover();   
+                });
+                </script>
+
+                  Get Coupon &raquo;</a></p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>&nbsp</p>
+    <p>&nbsp</p>
+        <hr>
+        <div class="row">
+            <div class="col-xs-12">
+
+
+</div>
+</div>
+
+
+
+
+<footer>  
+<div class="container text-left">
+
+
+
+
+ <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a class="almogLinker1" href="#home">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a class="almogLinker1" href="#about">About</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a class="almogLinker1" href="#services">Progress</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a class="almogLinker1" href="#mymodal">Developing Team</a>
+                        </li>
+                    </ul>
+                  
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+&nbsp &nbsp<a class="almogLinker1" data-toggle="modal" href="#myModal">Copyrights &copy; AGCoupons 2014. All Rights Reserved.</a>
+                </p></p>
+
+</div>
+
+
+
+
+
+
+
+
+
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4><i class="fa fa-gear fa-spin"></i>&nbspAGCoupons | Developing team.</h4>
+                            </div>
+                            <div class="modal-body">
+
+<div class="container">
+        <div class="row">
+
+          <div class="col-md-4">
+         
+         
+          </div>
+        </div>
+
+
+
+
+
+          <div class="row">
+<li><img src="http://mahshev.herobo.com/almogprofile.png">Almog Albalach |  <a href="https://facebook.com/almogalbalach" target="_blank">Profile</a></img></li>
+
+<br>
+<li><img src="http://mahshev.herobo.com/guyprofile.png"></img>Guy Gabbay | <a href="https://www.facebook.com/gabguy" target="_blank">Profile</a></img></li>
+</div>
+
+
+
+
+<br>
+       <p class="almogLinker1" font-size:24px>Copyrights © 2014 AGCoupons,
+       <a href="https://facebook.com/almogalbalach" target="_blank">Almog Albalach</a>
+       &
+       <a href="https://www.facebook.com/gabguy" target="_blank">Guy Gabbay</a>.
+   
+</p>
+ </div>
+
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">
+
+                                  Close
+
+
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </footer>
+            </div>
+        </div>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="modal fade" id="mySecurityModal" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4><i class="fa fa-eye"></i>&nbspBuyers Protection.</h4>
+                            </div>
+                            <div class="modal-body">
+
+<div class="container">
+        <div class="row">
+
+          <div class="col-md-4">
+         
+         <img src="http://mahshev.herobo.com/eye.png"> </img>
+          </div>
+        </div>
+
+          <div class="row">
+
+
+<li>MD5 Encryption on both html forms & Database.
+<li> DoPost method usage for keeping your pages details hidden.
+<li>Ability to deploy / push only from Dev.Team's Eclipse.
+<li>16 letters and numbers combination Database password.
+
+<br>
+
+</div>
+
+
+
+
+<br>
+       <p class="almogLinker1" font-size:24px>Copyrights © 2014 AGCoupons,
+       <a href="https://facebook.com/almogalbalach" target="_blank">Almog Albalach</a>
+       &
+       <a href="https://www.facebook.com/gabguy" target="_blank">Guy Gabbay</a>.
+   
+</p>
+ </div>
+
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">
+
+                                  Close
+
+
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+</div> 
+ </div>
+   </div>  
+
+   </div>
+</div>
+
+
+</body>
+</html>   

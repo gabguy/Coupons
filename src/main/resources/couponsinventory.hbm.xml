@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="il.ac.hit.model.Coupon" table="coupons">
+		<id name="id" type="int">
+			<column name="ID"/>
+		</id>
+		<property name="business">
+			<column name="BUSINESS"/>
+		</property>
+		<property name="image">
+			<column name="IMAGE"/>
+		</property>
+		<property name="details">
+			<column name="DETAILS"/>
+		</property>
+		<property name="category">
+			<column name="CATEGORY"/>
+		</property>
+		<property name="date" type="timestamp">
+			<column name="DATE"/>
+		</property>
+		<property name="latitude" type="double">
+			<column name="LATITUDE"/>
+		</property>
+		<property name="longitude" type="double">
+			<column name="LONGITUDE"/>
+		</property>
+	</class>
+</hibernate-mapping>
